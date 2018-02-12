@@ -1,0 +1,2 @@
+Round 126 to the nearest 100.
+100

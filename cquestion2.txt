@@ -1,0 +1,2 @@
+Rewrite this statement so it is correct: if noeggs == True: print(We have no eggs)
+if noeggs == True: print("We have no eggs")

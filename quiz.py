@@ -67,25 +67,24 @@ else:
 
 qnum = 1
 while qnum < 4:
-    with open(choice + "question" + str(qnum) + ".txt", "r") as q:
-        firstline = q.readline()
-        print(firstline)
+        question = open(choice + "question" + str(qnum) + ".txt", "r")
+        print(question.read())
         answer = input(">>> ")
-    with open(choice + "question" + str(qnum) + ".txt") as r:
-        print(r.readlines()[1:15])
-        realanswer = r.readlines()[1:15]
-    if any(answer in item for item in realanswer) == True:
-        print("\nCorrect. Next question.\n")
-        qnum = qnum + 1
-    else:
-        tries = tries - 1
-        if tries == 1:
-            tryword = "try"
+        realanswer = open(choice + "question" + str(qnum) + "a.txt", "r")
+        if answer == realanswer.read():
+            print("\nCorrect.")
+            qnum = qnum + 1
+            if qnum < 4:
+                 print("Next question.\n")
         else:
-            tryword = "tries"
-        print("\nIncorrect! You have " + str(tries), tryword + " left!\n")
-        if tries < 1:
-            show("fail.jpg")
-            break
+            tries = tries - 1
+            if tries == 1:
+                tryword = "try"
+            else:
+                tryword = "tries"
+            print("\nIncorrect! You have " + str(tries), tryword + " left!\n")
+            if tries < 1:
+                show("fail.jpg")
+                break
 if qnum > 3:
     show("win.jpg")

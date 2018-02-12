@@ -6,3 +6,4 @@ username = name[:3] + age
 print("Username: " + username)
 file.write(username + "," + passwd + "\n")
 file.close()
+x = input("Press Enter to quit.")

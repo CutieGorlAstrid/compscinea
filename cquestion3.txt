@@ -1,2 +1,1 @@
 How do you make the Python Console quit, commands in mind?
-quit()

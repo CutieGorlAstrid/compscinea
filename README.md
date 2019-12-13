@@ -1,2 +1,0 @@
-# compscinea
-Computer Science NEA

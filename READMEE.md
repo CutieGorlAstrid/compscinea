@@ -1,12 +1,8 @@
+# Year 10 Computer Science NEA
 
+## Analysis
 
-Analysis
-
- 
-
-Scenario
-
- 
+### Scenario
 
 The scenario describes a quiz that tests student’s knowledge
 on several topics. It asks that students must register an account before taking
@@ -18,11 +14,10 @@ name, age and year group.
 
  
 
-It also says to
-make the username from the first three letters of their name and their age.
+It also says to make the username from the first three letters of their name and their age.
 
 I just need to create an anagram of their name and age, so
-for example, mine would be ‘Ars16’. And I assume that the user must also create
+for example, mine would be ‘Ast18’. And I assume that the user must also create
 their own password. 
 
  
@@ -44,7 +39,7 @@ So I WILL need multiple files.
 
 
 I think I'll use a CLI/GUI hybrid.
- 
+
 
 Plan
 The files I’ll need are: registration program, quiz program,
@@ -54,18 +49,16 @@ Design
 
 Success Criteria
 
-* Create
-a program to register users and store their info in a CSV file
-* Create
-a program to be the actual quiz and use the data from the aforementioned CSV
+* Create a program to register users and store their info in a CSV file
+* Create a program to be the actual quiz and use the data from the aforementioned CSV
 file
 
 
 
 I’m thinking it should go like this for the registration…
 
- 
 
+```
 Enter your name:
 
 Enter your age:
@@ -80,29 +73,31 @@ Your username is: (first three letters of name followed by
 age)
 
 Your password is: (password)
+```
 
- 
 
 …and this for the actual quiz.
 
  
 
+```
 Enter your username: 
 
 Enter your password:
 
-Question 1: (question name)
-
+Question 1: (question name)`
+```
 etc.
 
- 
 
-Pseudocode
 
-Registration
 
- 
+### Pseudocode
 
+#### Registration 
+
+
+```
 Ask "Enter your name: " and wait for user input
 
 Store to variable name
@@ -129,8 +124,7 @@ Display "Saving user data…"
 
 Open connection to file ‘users.csv’ in write mode as userfile
 
-Append username + "," + password + "," + year
-+ "/n" to userfile
+Append username + "," + password + "," + year + "/n" to userfile
 
 Wait 3 seconds
 
@@ -146,12 +140,15 @@ Close connection to file stored in variable userfile
 
 Exit
 
+```
+
+
+
  
 
-Quiz
+#### Quiz
 
- 
-
+```
 Store False in new variable loginactive
 
 Create new empty variable answer
@@ -162,20 +159,15 @@ Open connection to file ‘users.csv’ in write mode as userfile
 
 While loginactive does not equal to True { 
 
-    Ask user to enter their
-username
+Ask user to enter their username
 
-    Store input in new
-variable username
+Store input in new variable username
 
-    Ask user to enter their
-password
+Ask user to enter their password
 
-    Store input in new
-variable password
+Store input in new variable password
 
-    If username has
-matching results in userfile {
+If username has matching results in userfile {
 
         If password matches result in userfile {
 
@@ -252,77 +244,24 @@ If num is less than or equal to 10 {
 Else {
 
     Open file "win.jpg"
+```
 
 Sources Table         
 
  
 
 
- 
-  
+
+
   Name
-  
-  
+
+
   Source
-  
+
  
- 
-  
+
+
   Programming Examples
-  
-  
+
+
   http://www.computing.outwood.com/website/NEA/programming.html
-  
- 
- 
-  
-   
-  
-  
-   
-  
- 
- 
-  
-   
-  
-  
-   
-  
- 
- 
-  
-   
-  
-  
-   
-  
- 
- 
-  
-   
-  
-  
-   
-  
- 
- 
-  
-   
-  
-  
-   
-  
- 
- 
-  
-   
-  
-  
-   
-  
- 
-
-
- 
-
